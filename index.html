@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Platforma szkoleniowa — prototyp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Ekran powitalny -->
+    <div id="welcome-screen" class="screen">
+      <h1>Platforma szkoleniowa</h1>
+      <label for="userSelect">Wybierz użytkownika:</label>
+      <select id="userSelect">
+        <option value="">-- wybierz --</option>
+        <option value="justyna">Justyna Jankowska</option>
+        <option value="klaudia">Klaudia Pierzak</option>
+
+      </select>
+      <button id="loginBtn" type="button">Zaloguj</button>
+    </div>
+
+    <!-- Panel użytkownika -->
+    <div id="dashboard" class="screen hidden">
+      <h2>Witaj, <span id="username"></span></h2>
+
+      <h3>Twoje szkolenia i treningi:</h3>
+      <ul id="trainingList"></ul>
+
+      <h3>Historia wyników:</h3>
+      <ul id="resultsList"></ul>
+
+      <button id="logoutBtn" type="button">Wyloguj</button>
+    </div>
+
+    <!-- Egzamin -->
+    <div id="exam-screen" class="screen hidden">
+      <h2>Egzamin — <span id="examTrainingName"></span></h2>
+      <form id="examForm"></form>
+      <div class="exam-buttons">
+        <button id="submitExamBtn" type="button">Zakończ egzamin</button>
+        <button id="cancelExamBtn" type="button">Anuluj</button>
+      </div>
+    </div>
+
+    <!-- Trening -->
+    <div id="training-screen" class="screen hidden">
+      <h2>Trening — <span id="trainingTitle"></span></h2>
+      <div id="trainingContent"></div>
+      <button id="finishTrainingBtn" type="button">Zakończ trening</button>
+    </div>
+
+    <!-- Wynik -->
+    <div id="result-screen" class="screen hidden">
+      <h2>Wynik egzaminu / treningu</h2>
+      <p id="examResult"></p>
+      <button id="backToDashboardBtn" type="button">Powrót do panelu</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
